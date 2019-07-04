@@ -1,0 +1,60 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+var person={};
+alert(person);
+
+var person = {
+  name:{first:'Larry',last:'Cai'},
+  //name:['Larry','Cai'],
+  greeting:()=>alert('Hello I am '+this.name.first+" "+this.name.last+'.'),
+  greeting2:function(){alert('Hello I am '+this.name.first+" "+this.name.last+'.')}
+  //greeting:function(){return 'Hello I am '+this.name[0]+" "+this.name[1]+'.'}
+}
+person.greeting2();
+/*
+Exception: SyntaxError: unterminated comment
+@Scratchpad/2:9
+*/
+Exception: SyntaxError: missing } after property list
+@Scratchpad/2:5
+*/
+/*
+Exception: SyntaxError: missing } after property list
+@Scratchpad/2:5
+*/
+//alert(person.name.first);
+//alert(person.greeting());
+
+var person = {
+  name: ['Bob', 'Smith'],
+  age: 32,
+  gender: 'male',
+  interests: ['music', 'skiing'],
+  bio: function() {
+    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  },
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name[0] + '.');
+  }
+};
+var t = (function(){
+   let x = 0;
+   //alert("Test");
+   return function(){
+     x++;
+     return x;
+   }
+})();
+
+alert(person.greeting());
+
+console.log(t());
+console.log(t());
+

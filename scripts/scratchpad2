@@ -1,0 +1,32 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+function Person(name){
+  this.name = name;
+  this.greeting = function(){
+    alert("Hello I'm "+this.name);
+  }
+}
+
+var p1 = new Person("Larry");
+var p2 = new Person("Mark");
+
+p1['age'] = 28;
+
+alert(p1.age);
+p1['setAge'] = function(age){
+  this.age = age;
+}
+p1.setAge(29);
+alert(p1.age);
+
+
+p1.greeting();
+p2.greeting();
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{
+            font-family: Arial;
+        }
+        body{
+            width: 50%;
+            max-width: 800px;
+            min-width: 600px;
+        }
+        .lastResult{
+            color:orange;
+        }
+
+        #highlight{
+            color:purple;
+        }
+
+        .h1_class{
+            color:brown;
+        }
+
+        #myId{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1_class">Guess a Number</h1>
+    <div class="form">
+        <label for="guessField" id="highlight">Enter a number: </label><input type="text" id="guessField" />
+        <input type="submit" value="Submit" class="guessSubmit" />
+    </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+<script src="../scripts/my_guessing.js"></script>
+</body>
+</html>
